@@ -1,0 +1,15 @@
+#banner {
+    background-color: rgb(164, 114, 211);
+    text-align: center;
+    height: 100px;
+}
+
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+
+  #hver:hover {
+      opacity: 50%;
+  }

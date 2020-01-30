@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AutodAPI</title>
+</head>
+<body>
+    <div role='banner' id="banner">Welcome</div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">HostName</th>
+                <th scope="col">Port</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Status</th>
+                <th scope="col">Priority</th>
+                <th scope="col">ClientCode</th>
+                <th scope="col">SourceType</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let param of params">
+            <tr>
+                <td id='hver' (click)="paramDetail(param.id)">{{ param.id }}</td>
+                <td>{{ param.hostname }}</td>
+                <td>{{ param.port }}</td>
+                <td>{{ param.username }}</td>
+                <td>{{ param.status }}</td>
+                <td>{{ param.priority }}</td>
+                <td>{{ param.clientCode }}</td>
+                <td>{{ param.sourceType }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div *ngFor="let detail of details">
+        <ul>
+            <li>ID: {{ detail.id }}</li>
+            <li>FileType: {{ detail.fileType}}</li>
+            <li>File_from_bsp: {{ detail.file_from_bsp }}</li>
+            <li>Country_Code: {{ detail.country_code }}</li>
+            <li>Rename_Info_Mask: {{ detail.renameinfo_mask }}</li>
+            <li>Rename_Format: {{ detail.rename_format }}</li>
+            <li>File_Path: {{ detail.file_path }}</li>
+            <li>File_Backup_Path: {{ detail.file_backup_path }}</li>
+            <li>Unzip_File: {{ detail.unzip_file }}</li>
+            <li>Import_File: {{ detail.import_file }}</li>
+            <li>Status: {{ detail.status}}</li>
+            <li>Download_fr_Folder: {{ detail.download_fr_folder }}</li>
+            <li>Classify_File: {{ detail.classify_file }}</li>
+            <li>Backup_File: {{ detail.backup_file}}</li>
+        </ul>
+    </div>
+</body>
+</html>
+
